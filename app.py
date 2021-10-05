@@ -92,7 +92,7 @@ def login():
     return render_template("login2.html")
 
 
-@app.route("/home", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def home():
     return render_template("Home.html")
 
