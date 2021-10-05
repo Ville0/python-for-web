@@ -1,0 +1,77 @@
+{% extends "master_temp.html" %} {%block title%} Registration {%endblock%} {%block link%}
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/nicepage.css')}}" media="screen">
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/Signup.css')}}" media="screen"> {%endblock%} {%block body%}
+
+
+
+<br><br><br><br>
+<section class="u-align-center u-clearfix u-image u-block-194a-1" custom-posts-hash="T" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" data-id="194a" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':584,'textHeight':514,'id':1,'headingProp':'h3','textProp':'text'}]"
+    data-style="login-form-3" id="carousel_b351" data-image-width="1000" data-image-height="667" style="background-image: url(&quot;/static/assets/images/photo-1561211919-1947abbbb35b.jpg&quot;); background-position: 50% 50%" data-block="82">
+    <div class="u-clearfix u-sheet u-valign-middle u-block-194a-2" style="min-height: 634px;">
+        <div class="u-align-center u-container-style u-group u-radius-50 u-shape-round u-white u-block-194a-3" style="width: 584px; min-height: 514px; margin: 60px auto; height: auto;" data-block="83" data-block-type="Group">
+            <div class="u-container-layout u-block-194a-4" style="padding-top: 30px; padding-bottom: 30px; padding-left: 0px; padding-right: 0px" data-container-layout-dom="3">
+                <h3 class="u-text u-text-default u-block-194a-5" style="font-size: 2.25rem; margin-top: 18px; margin-left: auto; margin-right: auto; margin-bottom: 0px" data-block="84" data-block-type="Text">Registration</h3>
+
+                <div class=" u-container-layout u-block-194a-4" style="padding-top: 10px; padding-bottom: 15px; padding-left: 0px; padding-right: 0px">
+
+                    {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} " role="alert">
+                        <span>{{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                    </div>
+                    {% endfor %} {% endif %} {% endwith %}
+                </div>
+
+
+                <div class="u-form u-block-194a-6" data-block="104" style="margin: 18px auto 0px; height: 295px; width: 502.922px;" data-block-type="Form" data-block-selected="true">
+                    <form action="{{url_for('reg')}}" method="POST" class="u-clearfix u-inner-form u-form-vertical u-form-spacing-10 u-form-custom-backend" source="custom" name="form" style="padding: 10px;" redirect="true">
+                        <input type="hidden" id="siteId" name="siteId" value="125600850">
+                        <input type="hidden" id="pageId" name="pageId" value="1774624935">
+
+                        <div class="u-form-group u-form-name ui-draggable ui-draggable-handle u-block-194a-7" data-block="105" data-block-type="FormField">
+                            <label for="name-0756" class="u-label u-form-control-hidden u-block-194a-8" data-block-type="FormChild"></label>
+                            <input type="text" placeholder="Enter your Name" id="name-0756" name="name" class="u-input u-input-rectangle u-white u-border-1 u-border-grey-30 u-block-194a-9" required="" data-block-type="FormChild">
+                        </div>
+                        <div class="u-form-group u-form-email ui-draggable ui-draggable-handle u-block-194a-10" data-block="106" data-block-type="FormField">
+                            <label for="email-0756" class="u-label u-form-control-hidden u-block-194a-11" data-block-type="FormChild"></label>
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter a valid email address" id="email-0756" name="email" class="u-input u-input-rectangle u-white u-border-1 u-border-grey-30 u-block-194a-12" required="" data-block-type="FormChild">
+                        </div>
+                        <div class="u-form-group ui-draggable ui-draggable-handle u-block-194a-18" data-block="111" data-block-type="FormField" style="margin-left: 0px;">
+                            <label for="text-5f90" class="u-label u-form-control-hidden u-block-194a-19" data-block-type="FormChild"></label>
+                            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your Password" id="text-5f90" name="password" class="u-input u-white u-border-grey-30 u-border-1 u-input-rectangle u-block-194a-20" data-block-type="FormChild" required="required">
+                        </div>
+
+
+                        <div class="u-form-group u-form-phone ui-draggable ui-draggable-handle u-block-194a-21" data-block="113" style="margin-left: 0px;" data-block-type="FormField" data-block-selected="true">
+                            <label for="phone-429b" class="u-label u-form-control-hidden u-block-194a-22"></label>
+                            <input type="tel" placeholder="Enter your phone " id="phone-429b" name="phone" class="u-input u-input-rectangle u-white u-border-1 u-border-grey-30 u-block-194a-23" required="" maxlength="15" pattern="\+?\d{0,2}[\s\(\-]?([0-9]{3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})">
+                        </div>
+                        <div class="u-form-group u-form-submit u-align-center u-block-194a-16" data-block="108">
+                            <a href="{{url_for('login')}}" class="u-btn u-button-style u-btn-submit ui-draggable ui-draggable-handle u-block-194a-17" data-block="109" data-block-type="FormChild,FormButton">Submit</a>
+                            <input type="submit" value="submit" class="u-form-control-hidden">
+                        </div>
+                        <div>
+                            <p><strong>__Note__<br> </strong>The Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+                        </div>
+
+                        <div class="u-form-send-message u-form-send-success">
+                            Thank you! Your message has been sent.
+                        </div>
+                        <div class="u-form-send-message u-form-send-error">
+                            Unable to send your message. Please fix errors then try again.
+                        </div>
+                        <input type="hidden" value="" name="recaptchaResponse">
+                    </form>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{%endblock%}

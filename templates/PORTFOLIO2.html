@@ -1,0 +1,992 @@
+{% extends "master_temp.html" %} {%block title%} Portfolio {%endblock%} {%block link%}
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/nicepage.css')}}" media="screen">
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/PORTFOLIO.css')}}" media="screen"> {%endblock%} {%block massage%}
+<div class=" u-container-layout u-block-194a-4" style="padding-top: 10px; padding-bottom: 15px; padding-left: 0px; padding-right: 0px">
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+    <div class="alert alert-{{ category }} " role="alert">
+        <span>{{ message }}</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+</div>
+
+
+
+{%endblock%} {%block body%}
+<section class="u-align-center u-black u-clearfix u-section-1" id="sec-adf2">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-custom-font u-font-oswald u-text u-text-1">&nbsp;some of my work</h3>
+        <div class="pointer-event u-carousel u-gallery u-layout-thumbnails u-lightbox u-no-transition u-show-text-always u-gallery-1" id="carousel-e131" data-interval="5000" data-u-ride="carousel">
+            <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                <div class="u-active u-carousel-item u-gallery-item u-carousel-item-1">
+                    <div class="u-back-slide" data-image-width="1600" data-image-height="1238">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/51712567_935047186694924_8850302454445637632_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-1">
+                        <h3 class="u-gallery-heading">Sample Title</h3>
+                        <p class="u-gallery-text">Sample Text</p>
+                    </div>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-2" data-image-width="1600" data-image-height="1087">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/BlueFlower2.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-2">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-3" data-image-width="1600" data-image-height="1600">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/97203451_1278567799009526_1387301782664773632_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-3">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-4" data-image-width="1600" data-image-height="1049">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/81471169_1165873006945673_6162788044056297472_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-4">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-5" data-image-width="1600" data-image-height="1600">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/90718184_1238882186311421_7727473238766256128_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-5">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-6" data-image-width="1600" data-image-height="800">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/71381593_1080613368804971_432402064522346496_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-6">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-7" data-image-width="1600" data-image-height="1413">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/70453735_1070571756475799_526405562758332416_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-7">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-8" data-image-width="1164" data-image-height="1600">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/68751629_1054200801446228_4637730798894579712_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-8">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-9" data-image-width="1564" data-image-height="1600">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/83759082_1193292450870395_2563872657103650816_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-9">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-10" data-image-width="1265" data-image-height="1600">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/117304015_1349828705216768_490601390788639139_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-10">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-11" data-image-width="2048" data-image-height="1236">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/83259288_1189534017912905_539637708457246720_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-11">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-12" data-image-width="1262" data-image-height="1975">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/70694792_1080751388791169_7167971856320823296_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-12">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-13" data-image-width="1590" data-image-height="1674">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/81894952_1176325619233745_8972826549866725376_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-13">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-14" data-image-width="2048" data-image-height="1122">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/65908611_1026958000837175_2475904687430172672_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-14">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-15" data-image-width="2048" data-image-height="1296">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/49521092_917924348407208_8431377348758077440_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-15">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+                <div class="u-carousel-item u-gallery-item u-carousel-item-16" data-image-width="1428" data-image-height="1870">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded u-image-contain" src="{{url_for('static',filename='/assets/images/32116746_763632383836406_1664647543457316864_n.jpg')}}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-16">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    <style data-mode="XL" data-visited="true"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM" data-visited="true"></style>
+                    <style data-mode="XS" data-visited="true"></style>
+                </div>
+            </div>
+            <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-e131" role="button" data-u-slide="prev">
+                <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+                <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            </a>
+            <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-e131" role="button" data-u-slide="next">
+                <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+                <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            </a>
+            <ol class="u-carousel-thumbnails u-spacing-10 u-carousel-thumbnails-1">
+                <li class="u-active u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="0">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/51712567_935047186694924_8850302454445637632_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="1">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/BlueFlower2.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="2">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/97203451_1278567799009526_1387301782664773632_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="3">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/81471169_1165873006945673_6162788044056297472_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="4">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/90718184_1238882186311421_7727473238766256128_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="5">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/71381593_1080613368804971_432402064522346496_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="6">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/70453735_1070571756475799_526405562758332416_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="7">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/68751629_1054200801446228_4637730798894579712_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="8">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/83759082_1193292450870395_2563872657103650816_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="9">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/117304015_1349828705216768_490601390788639139_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="10">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/83259288_1189534017912905_539637708457246720_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="11">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/70694792_1080751388791169_7167971856320823296_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="12">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/81894952_1176325619233745_8972826549866725376_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="13">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/65908611_1026958000837175_2475904687430172672_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="14">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/49521092_917924348407208_8431377348758077440_n.jpg')}}">
+                </li>
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="15">
+                    <img class="u-carousel-thumbnail-image u-image" src="{{url_for('static',filename='/assets/images/32116746_763632383836406_1664647543457316864_n.jpg')}}">
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+<style class="u-overlap-style">
+    .u-overlap:not(.u-sticky-scroll) .u-header {
+        background-color: #ffffff !important
+    }
+</style>
+{%if not session.get( 'username')%}
+<section class="u-align-left u-clearfix u-block-7563-29" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="carousel_677e" data-id="7563"
+    data-source="fix" style="">
+    <div class="u-clearfix u-sheet u-block-7563-2" style="min-height: 329px;">
+
+        <div class="u-container-style u-group u-block-7563-6" style="min-height: 206px; background-image: none; width: 901px; margin: 20px auto 60px;" data-block="140" data-block-type="Group" data-block-selected="true">
+            <div class="u-container-layout u-block-7563-7" style="padding-left: 23px; padding-right: 23px" data-container-layout-dom="4">
+
+
+                <h2 class="u-align-center u-text u-block-7563-8" style="font-size: 3rem; font-weight: 700; text-transform: none; margin-top: 11px; margin-left: 7px; margin-right: 7px; margin-bottom: 0" data-block="141" data-block-type="Text">Make your Order</h2>
+
+                <h5 class="u-align-center u-text u-block-7563-65" style="font-weight: 700; margin-top: 16px; margin-left: 7px; margin-right: 7px; margin-bottom: 0" data-block="142" data-block-type="Text">You Have to Login First</h5><a href="{{url_for('login')}}" class="u-btn u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-round u-block-7563-66" data-block="167" style="border-style: none; font-weight: 700; text-transform: uppercase; font-size: 1.25rem; letter-spacing: 1px; margin: 11px auto 0px; padding: 17px 123.427px 17.9992px 122px;"
+                    data-block-type="Button">LOGIN</a></div>
+        </div>
+    </div>
+    <style data-mode="XL" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 329px
+            }
+            .u-block-7563-6 {
+                min-height: 206px;
+                background-image: none;
+                width: 901px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 60px
+            }
+            .u-block-7563-7 {
+                padding-left: 23px;
+                padding-right: 23px
+            }
+            .u-block-7563-8 {
+                font-size: 3rem;
+                font-weight: 700;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-66 {
+                border-style: none;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                letter-spacing: 1px;
+                margin-top: 11px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0px;
+                padding-top: 17px;
+                padding-right: 123.427px;
+                padding-bottom: 17.9992px;
+                padding-left: 122px
+            }
+        }
+    </style>
+    <style data-mode="LG" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 329px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 901px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 60px
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 23px;
+                padding-right: 23px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                font-size: 3rem;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-66 {
+                border-style: none;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                letter-spacing: 1px;
+                padding-top: 17px;
+                padding-right: 123.427px;
+                padding-bottom: 17.9992px;
+                padding-left: 122px;
+                margin-top: 11px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0px
+            }
+        }
+    </style>
+    <style data-mode="MD" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 329px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 720px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 60px
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 23px;
+                padding-right: 23px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                font-size: 3rem;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-66 {
+                border-style: none;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                letter-spacing: 1px;
+                padding-top: 17px;
+                padding-right: 123.427px;
+                padding-bottom: 17.9992px;
+                padding-left: 122px;
+                margin-top: 11px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0px
+            }
+        }
+    </style>
+    <style data-mode="SM" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 329px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 540px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 60px
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 10px;
+                padding-right: 10px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                font-size: 3rem;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-66 {
+                border-style: none;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                letter-spacing: 1px;
+                padding-top: 17px;
+                padding-right: 123.427px;
+                padding-bottom: 17.9992px;
+                padding-left: 122px;
+                margin-top: 11px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0px
+            }
+        }
+    </style>
+    <style data-mode="XS" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 329px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 340px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 60px
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 10px;
+                padding-right: 10px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                text-transform: none;
+                font-size: 2.25rem;
+                margin-top: 11px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-66 {
+                border-style: none;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                letter-spacing: 1px;
+                padding-top: 17px;
+                padding-right: 123.427px;
+                padding-bottom: 17.9992px;
+                padding-left: 122px;
+                margin-top: 11px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0px
+            }
+        }
+    </style>
+</section>
+{%else%}
+<section class="u-align-left u-clearfix u-block-7563-29" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="carousel_677e" data-id="7563" data-source="fix" style="">
+    <div class="u-clearfix u-sheet u-block-7563-2" style="min-height: 621px">
+
+        <div class="u-container-style u-group u-block-7563-6" style="min-height: 206px; background-image: none; width: 901px; margin-top: 20px; margin-left: auto; margin-right: auto; margin-bottom: 0" data-block="31">
+            <div class="u-container-layout u-block-7563-7" style="padding-left: 23px; padding-right: 23px" data-container-layout-dom="1">
+                <h2 class="u-align-center u-text u-block-7563-8" style="font-size: 3rem; font-weight: 700; text-transform: none; margin-top: 11px; margin-left: 7px; margin-right: 7px; margin-bottom: 0" data-block="32">Make your Order</h2>
+
+
+
+                <h5 class="u-align-center u-text u-block-7563-65" style="font-weight: 700; margin-top: 16px; margin-left: 7px; margin-right: 7px; margin-bottom: 0" data-block="33">For any Design you have you give me Size<span class="u-text-palette-2-base"> "Hight &amp; Weight"</span><span class="u-text-palette-2-base"> </span>so you get the prize.&nbsp;<br>Thank You.</h5>
+            </div>
+        </div>
+        <div class="u-form u-block-7563-30" style="height: 403px; width: 855px; margin-top: -59px; margin-left: auto; margin-right: auto; margin-bottom: 51px" data-block="34" data-block-type="Form">
+            <form action="#order" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form u-form-custom-backend" style="padding: 10px" source="custom" name="form" redirect="true">
+
+
+
+                <div class="u-form-group u-form-select ui-draggable ui-draggable-handle u-block-7563-62" style="margin-left: 0" data-block="35" data-block-type="FormField">
+                    <label for="select-c6c5" class="u-label u-text-grey-40 u-block-7563-63" style="">Service</label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-c6c5" name="Service" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-7563-64" required="required" style="">
+                                
+                            {% for row in service%}
+                       <option value='{{row.id}}'>{{row.sname}}  - PKR: {{row.sprice}} </option> {%endfor%}
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+                    </div>
+                </div>
+                <div class="u-form-group u-form-message ui-draggable ui-draggable-handle u-block-7563-37" style="" data-block="36" data-block-type="FormField" data-block-selected="true"><label for="message-f2a8" class="u-label u-text-grey-40 u-block-7563-38" style="">Details</label>
+                    <textarea placeholder="Enter your order details" rows="4" cols="50" id="message-f2a8" name="message" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-7563-39" required="" style=""></textarea></div>
+                <div class="u-form-group ui-draggable ui-draggable-handle u-form-partition-factor-2 u-block-7563-55" style="margin-left: 0" data-block="37" data-block-type="FormField">
+                    <label for="text-e38a" class="u-label u-text-grey-40 u-block-7563-57" style=""> Height in Inches</label>
+                    <input type="float" placeholder="20 inch" id="text-e38a" name="height" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-7563-58" style="">
+                </div>
+                <div class="u-form-group ui-draggable ui-draggable-handle u-form-partition-factor-2 u-block-7563-59" style="margin-left: 0" data-block="38" data-block-type="FormField">
+                    <label for="text-ae4e" class="u-label u-text-grey-40 u-block-7563-60" style="">width in inches</label>
+                    <input type="float" placeholder="20 inch" id="text-ae4e" name="weight" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-7563-61" style="">
+                </div>
+                <div class="u-align-center u-form-group u-form-submit u-block-7563-40" style="" data-block="40">
+                    <a href="{{url_for('order')}}" class="u-btn u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base ui-draggable ui-draggable-handle u-block-7563-41" style="letter-spacing: 1px; border-style: none; font-weight: 700; text-transform: uppercase"
+                        data-block="41" data-block-type="FormChild,FormButton">Submit</a>
+                    <input type="submit" value="submit" class="u-form-control-hidden">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <style data-mode="XL" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 621px
+            }
+            .u-block-7563-6 {
+                min-height: 206px;
+                background-image: none;
+                width: 901px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0
+            }
+            .u-block-7563-7 {
+                padding-left: 23px;
+                padding-right: 23px
+            }
+            .u-block-7563-8 {
+                font-size: 3rem;
+                font-weight: 700;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-30 {
+                height: 403px;
+                width: 855px;
+                margin-top: -59px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 51px
+            }
+            .u-block-7563-62 {
+                margin-left: 0
+            }
+            .u-block-7563-55 {
+                margin-left: 0
+            }
+            .u-block-7563-59 {
+                margin-left: 0
+            }
+            .u-block-7563-41 {
+                letter-spacing: 1px;
+                border-style: none;
+                font-weight: 700;
+                text-transform: uppercase
+            }
+        }
+    </style>
+    <style data-mode="LG" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 621px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 901px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 23px;
+                padding-right: 23px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                font-size: 3rem;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 0
+            }
+            .u-block-7563-30 {
+                height: 403px;
+                width: 855px;
+                margin-top: -59px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 51px
+            }
+            .u-block-7563-62 {
+                margin-left: 0
+            }
+            .u-block-7563-37 {
+                margin-top: 0;
+                margin-bottom: 10px
+            }
+            .u-block-7563-55 {
+                margin-left: 0
+            }
+            .u-block-7563-59 {
+                margin-left: 0
+            }
+            .u-block-7563-41 {
+                border-style: none;
+                letter-spacing: 1px;
+                font-weight: 700;
+                text-transform: uppercase
+            }
+        }
+    </style>
+    <style data-mode="MD" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 621px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 720px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 23px;
+                padding-right: 23px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                font-size: 3rem;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-30 {
+                height: 403px;
+                width: 720px;
+                margin-top: -59px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 51px
+            }
+            .u-block-7563-62 {
+                margin-left: 0
+            }
+            .u-block-7563-37 {
+                margin-top: 0;
+                margin-bottom: 10px
+            }
+            .u-block-7563-55 {
+                margin-left: 0
+            }
+            .u-block-7563-59 {
+                margin-left: 0
+            }
+            .u-block-7563-41 {
+                border-style: none;
+                letter-spacing: 1px;
+                font-weight: 700;
+                text-transform: uppercase
+            }
+        }
+    </style>
+    <style data-mode="SM" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 621px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 540px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 10px;
+                padding-right: 10px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                font-size: 3rem;
+                text-transform: none;
+                margin-top: 11px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-30 {
+                height: 403px;
+                width: 540px;
+                margin-top: -59px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 51px
+            }
+            .u-block-7563-62 {
+                margin-left: 0
+            }
+            .u-block-7563-37 {
+                margin-top: 0;
+                margin-bottom: 10px
+            }
+            .u-block-7563-55 {
+                margin-left: 0
+            }
+            .u-block-7563-59 {
+                margin-left: 0
+            }
+            .u-block-7563-41 {
+                border-style: none;
+                letter-spacing: 1px;
+                font-weight: 700;
+                text-transform: uppercase
+            }
+        }
+    </style>
+    <style data-mode="XS" data-visited="true">
+        @media (max-width: 0px) {
+            .u-block-7563-2 {
+                min-height: 621px
+            }
+            .u-block-7563-6 {
+                background-image: none;
+                min-height: 206px;
+                width: 340px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0
+            }
+            .u-block-7563-7 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 10px;
+                padding-right: 10px
+            }
+            .u-block-7563-8 {
+                font-weight: 700;
+                text-transform: none;
+                font-size: 2.25rem;
+                margin-top: 11px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-65 {
+                font-weight: 700;
+                margin-top: 16px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0
+            }
+            .u-block-7563-30 {
+                height: 403px;
+                width: 340px;
+                margin-top: -59px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 51px
+            }
+            .u-block-7563-62 {
+                width: 100%;
+                margin-left: 0
+            }
+            .u-block-7563-37 {
+                width: 100%;
+                margin-top: 0;
+                margin-bottom: 10px
+            }
+            .u-block-7563-55 {
+                width: 100%;
+                margin-left: 0
+            }
+            .u-block-7563-59 {
+                width: 100%;
+                margin-left: 0
+            }
+            .u-block-7563-40 {
+                width: 100%
+            }
+            .u-block-7563-41 {
+                border-style: none;
+                letter-spacing: 1px;
+                font-weight: 700;
+                text-transform: uppercase
+            }
+        }
+    </style>
+</section>
+
+{%endif%}
+
+<style class="u-overlap-style">
+    .u-overlap:not(.u-sticky-scroll) .u-header {
+        background-color: #ffffff !important
+    }
+</style>
+<script>
+    $('.carousel').carousel()
+</script>
+
+{%endblock%}

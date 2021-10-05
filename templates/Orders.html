@@ -1,0 +1,91 @@
+{% extends "master_temp.html" %} {%block title%} Orders {%endblock%} {%block link%}
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/nicepage.css')}}" media="screen">
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/Orders.css')}}" media="screen"> {%endblock%} {%block massage%}
+<div class=" u-container-layout u-block-194a-4" style="padding-top: 10px; padding-bottom: 15px; padding-left: 25px; padding-right: 25px">
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+    <div class="alert alert-{{ category }} " role="alert">
+        <span>{{ message }}</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+</div>
+
+
+
+{%endblock%} {%block body%}
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-3387">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-tab-links-align-left u-tabs u-tabs-1">
+            <ul class="u-border-2 u-border-palette-1-base u-spacing-10 u-tab-list u-unstyled" role="tablist">
+                <li class="u-tab-item" role="presentation">
+                    <a class="active u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">Description</a>
+                </li>
+            </ul>
+            <div class="u-tab-content">
+                <div class="u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                        <h4 class="u-text u-text-default u-text-1">Orders list</h4>
+                        <div class="u-table u-table-responsive u-table-1">
+                            <table class="u-table-entity">
+                                <colgroup>
+                                    <col width="14.26%">
+                                    <col width="14.26%">
+                                    <col width="14.26%">
+                                    <col width="13.25%">
+                                    <col width="6.95%">
+                                    <col width="6.95%">
+                                    <col width="30.07%">
+                                    <col width="25.00%">
+                                    <col width="13.25%">
+                                </colgroup>
+                                <tbody class="u-table-alt-grey-5 u-table-body">
+                                    <tr style="height: 51px;">
+                                        <td class="u-table-cell">Name</td>
+                                        <td class="u-table-cell">Email</td>
+                                        <td class="u-table-cell">Phon</td>
+                                        <td class="u-table-cell">Services</td>
+                                        <td class="u-table-cell">Hight</td>
+                                        <td class="u-table-cell">wright</td>
+                                        <td class="u-table-cell">Details</td>
+                                        <td class="u-table-cell">Date</td>
+                                        <td class="u-table-cell">Price</td>
+                                    </tr>
+                                    {%for data in ord%}
+                                    <tr style="height: 51px;">
+
+
+                                        <td class="u-table-cell">{{data.User.name}}</td>
+                                        <td class="u-table-cell">{{data.User.email}}</td>
+                                        <td class="u-table-cell">{{data.User.phone}}</td>
+                                        <td class="u-table-cell">{{data.Ser.sname}}</td>
+                                        <td class="u-table-cell">{{data.Order.height}}</td>
+                                        <td class="u-table-cell">{{data.Order.width}}</td>
+                                        <td class="u-table-cell">{{data.Order.details}}</td>
+                                        <td class="u-table-cell">{{data.Order.order_date}}</td>
+                                        <td class="u-table-cell">{{data.Order.price}}</td>
+
+                                    </tr>
+                                    {%endfor%}
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style class="u-overlap-style">
+    .u-overlap:not(.u-sticky-scroll) .u-header {
+        background-color: #ffffff !important
+    }
+</style>
+
+{%endblock%}

@@ -1,0 +1,152 @@
+{% extends "master_admin.html" %} {%block title%} Users {%endblock%}{%block link%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>{%endblock%} {%block body%}
+
+
+<section>
+
+    <div style="margin-right:25px; margin-left: 25px;" class="row">
+        <div class="col-8">
+            <strong>Search For : {{tag}}</strong>
+        </div>
+        <div STYLEclass="col-4">
+            <form action="" method="post" autocomplete="off">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" name="tag" id="tag" placeholder="Enter Username" />
+                    </div>
+                    <div class="col-6" text-align="left">
+                        <input type="submit" value="Search" class="form-control btn btn-primary " name="">
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-12 card-body table-responsive ">
+                <table id="example " class=" table table-hover responsive nowrap " style="width:100% ">
+                    <thead>
+                        <tr>
+                            <th>Service ID</th>
+                            <th>Service Name</th>
+                            <th>Service Price</th>
+                            <th>Order Access</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for data in service%}
+                        <tr>
+                            <td>
+                                <a href="# ">
+                                    <div class="d-flex align-items-center ">
+                                        <div class="avatar avatar-blue mr-3 ">{{data.id}}</div>
+                            </td>
+                            <td>{{data.sname}}</td>
+                            <td>{{data.sprice}}</td>
+                            <td>
+                                <div class="badge badge-success badge-success-alt ">Enabled</div>
+                            </td>
+                            <td class="td-actions text-right " width="130">
+
+                                <a href="/update/service/{{data.id}}" id="id" class="btn btn-primary btn-sm  ">edit</a>
+                                <a href="/delete/service/{{data.id}}" class="btn btn-danger btn-delete btn-sm  ">delete</a>
+                            </td>
+                        </tr>
+                        {%endfor%}
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+        <section>
+
+            <div style="margin-right:25px; margin-left: 25px; " class="row ">
+
+                <p>Add Services</p>
+                <div class="container">
+                    <div class="row-py-5 col-12 card-body table-responsive badge " style="background-color:white; padding:25px">
+                        <form action="{{url_for('sertab')}}" method="POST" enctype="multimedia/form-data">
+                            <div class="form-row table-hover responsive nowrap" style="margin-right:0%; margin-left:0%; float:right ">
+                                <div class="col ">
+                                    <input style="width:300px;" type=" text " name="name" id="name" class="card-head form-control " placeholder=" Service Name " required=" ">
+                                </div>
+                                <div class="col ">
+                                    <input style="width:300px; " type="float " name="price" id="price" class="form-control " placeholder="Price " required=" ">
+                                </div>
+                                <div class="col " text-align="left ">
+                                    <button style=" width:100px " type="submit " class="form-control btn btn-primary " onclick="getFocus()">Submit</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <div class=" container text-center ">
+            <div class="row py-5 ">
+                <div class="col-12 ">
+                    <h6 class="small text-danger ">Currently I'm just experimenting with this stuff, so there might be lots of redundant CSS.</h6>
+                </div>
+            </div>
+        </div>
+</section>
+<style>
+    table {
+        width: 100%;
+    }
+    
+    #example_filter {
+        float: right;
+    }
+    
+    #example_paginate {
+        float: right;
+    }
+    
+    label {
+        display: inline-flex;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+    }
+    
+    .page-item.disabled .page-link {
+        color: #6c757d;
+        pointer-events: none;
+        cursor: auto;
+        background-color: #fff;
+        border-color: #dee2e6;
+    }
+</style>
+<script>
+    function checkAll(bx) {
+        var cbs = document.getElementsByTagName('input');
+        for (var i = 0; i < cbs.length; i++) {
+            if (cbs[i].type == 'checkbox') {
+                cbs[i].checked = bx.checked;
+            }
+        }
+    }
+</script>
+
+<script>
+    window.onload = function() {
+        document.getElementById("myText").focus();
+    };
+</script>
+
+
+{%endblock%}

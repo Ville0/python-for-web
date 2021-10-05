@@ -1,0 +1,135 @@
+{% extends "master_admin.html" %} {%block title%} Users {%endblock%}{%block link%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>{%endblock%} {%block body%}
+
+
+<section>
+
+    <div style="margin-right:25px; margin-left: 25px;" class="row">
+        <div class="col-8">
+            <strong>Search For : {{tag}}</strong>
+        </div>
+        <div STYLEclass="col-4">
+            <form action="" method="post" autocomplete="off">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" name="tag" id="tag" placeholder="Enter Username" />
+                    </div>
+                    <div class="col-6" text-align="left">
+                        <input type="submit" value="Search" class="form-control btn btn-primary " name="">
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-12 card-body table-responsive">
+                <table id="example" class="table table-hover responsive nowrap" style=" width:inherit ">
+
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>User Name</th>
+                            <th>User Email &<br> User Phone</th>
+
+                            <th>Service</th>
+                            <th>Service Price</th>
+                            <th>Order Time</th>
+                            <th>Height & width</th>
+
+                            <th>Details</th>
+                            <th>Actions</th>
+                            <th>
+                                <!-- <input type="checkbox" onclick="checkAll(this)"> -->
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for data in ord%}
+
+                        <td>
+                            <a href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-blue mr-3">{{data.Order.id}}</div>
+                        </td>
+                        <td>{{data.User.name}}</td>
+                        <td>
+                            <div class="badge badge-dark badge-error-alt">{{data.User.email}}<br><br>{{data.User.phone}}</div>
+                        </td>
+
+                        <td>{{data.Ser.sname}}</td>
+                        <td>{{data.Ser.sprice}}</td>
+                        <td>
+                            <div class="badge badge-success badge-error-alt">{{data.Order.order_date}}</div>
+                        </td>
+
+                        <td>
+                            <div class="badge badge-info badge-error-alt">H: {{data.Order.height}}<br><br> W: {{data.Order.width}}</div>
+                        </td>
+                        <td>
+                            <div style="width: 130px;"> {{data.Order.details}}</div>
+                        </td>
+                        <td class="td-actions text-right ">
+                            <!-- <div><input type="hidden" type="checkbox" name="" value="{{data.Order.id}}"></div> -->
+                            <a href="/delete/order/{{data.Order.id}}" class="btn btn-danger btn-delete btn-sm  ">delete</a>
+                        </td>
+                        </tr>
+                        {%endfor%}
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center ">
+            <div class="row py-5 ">
+                <div class="col-12 ">
+                    <h6 class="small text-danger ">Currently I'm just experimenting with this stuff, so there might be lots of redundant CSS.</h6>
+                </div>
+            </div>
+        </div>
+</section>
+<style>
+    table {
+        width: 100%;
+    }
+    
+    #example_filter {
+        float: right;
+    }
+    
+    #example_paginate {
+        float: right;
+    }
+    
+    label {
+        display: inline-flex;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+    }
+    
+    .page-item.disabled .page-link {
+        color: #6c757d;
+        pointer-events: none;
+        cursor: auto;
+        background-color: #fff;
+        border-color: #dee2e6;
+    }
+</style>
+<script>
+    function checkAll(bx) {
+        var cbs = document.getElementsByTagName('input');
+        for (var i = 0; i < cbs.length; i++) {
+            if (cbs[i].type == 'checkbox') {
+                cbs[i].checked = bx.checked;
+            }
+        }
+    }
+</script>
+
+{%endblock%}

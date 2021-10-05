@@ -1,0 +1,90 @@
+{% extends "master_admin.html" %} {%block title%} Users {%endblock%}{%block link%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    .note {
+        text-align: center;
+        height: 80px;
+        background: -webkit-linear-gradient(right, #00b7ff, #11c547);
+        color: #fff;
+        font-weight: bold;
+        line-height: 80px;
+    }
+    
+    .form-content {
+        padding: 5%;
+        border: 1px solid #ced4da;
+        margin-bottom: 2%;
+    }
+    
+    .form-control {
+        border-radius: 1.5rem;
+    }
+    
+    .btnSubmit {
+        border: none;
+        border-radius: 1.5rem;
+        padding: 0%;
+        width: 20%;
+        cursor: pointer;
+        background: #11c547;
+        color: #fff;
+    }
+</style>
+
+{%endblock%} {%block body%}
+
+<section>
+
+
+    <div class="container register-form">
+
+
+        <div class="form">
+            <div class="note">
+                <div>
+
+                    <p>ADD USER</p>
+
+                </div>
+
+            </div>
+            <form action="/add/user" method="POST" enctype="multimedia/form-data">
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Name</label>
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name *" value="" required="" />
+                            </div>
+                            <label>Phone</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number *" value="" required="" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Email</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Your Email *" value="" required="" />
+                            </div>
+                            <label>Password</label>
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="password" name="password" placeholder="Your Password *" value="" required="" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit " class="form-control btnSubmit " onclick="getFocus()">ADD USER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+</div>{%endblock%}

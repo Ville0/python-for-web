@@ -1,0 +1,41 @@
+{% extends "master_admin.html" %} {%block title%} Users {%endblock%}{%block link%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>{%endblock%} {%block body%}
+
+<section>
+
+    <div style="margin-right:25px; margin-left: 25px; " class="row ">
+
+        <p>Update Service</p>
+        <div class="container">
+            <div class="row-py-5 col-12 card-body table-responsive badge " style="background-color:white; padding:25px">
+
+                <form action="/update/service/{{serv.id}}" method="POST" enctype="multimedia/form-data">
+
+                    <div class="form-row table-hover responsive nowrap" style="margin-right:0%; margin-left:0%; float:right ">
+                        <div class="col ">
+                            <input style="width:300px;" type=" text " name="name" id="name" class="card-head form-control " value=" {{serv.sname}} " required=" ">
+                        </div>
+                        <div class="col ">
+                            <input style="width:300px; " type="float " name="price" id="price" class="form-control " value="{{serv.sprice}} " required=" ">
+                        </div>
+                        <div class="col " text-align="left ">
+                            <button style=" width:100px " type="submit " class="form-control btn btn-primary " onclick="getFocus()">Update</button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+</div>{%endblock%}

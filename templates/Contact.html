@@ -1,0 +1,43 @@
+{% extends "master_temp.html" %}
+
+{%block title%}
+ Contact
+{%endblock%}
+
+{%block link%}
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/nicepage.css')}}" media="screen">
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/Contact.css')}}" media="screen">
+{%endblock%}
+
+{%block body%}
+
+    <section class="u-black u-clearfix u-section-1" id="sec-10d6">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1" src="{{url_for('static',filename='/assets/images/BlueFlower2.jpg')}}" alt="" data-image-width="5401" data-image-height="3668">
+            <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h1 class="u-align-left u-text u-text-1">Contact</h1>
+                    <p class="u-align-left u-text u-text-2">
+                        <span class="u-text-white" style="font-weight: 700;"> Questions or Comments ? </span>
+                        <br>
+                        <span style="font-size: 0.875rem;">Feel free to send me a message. I am available for commissions as well as for shows. I love to hear what viewers think of my work. <br>I look forward to hearing from you.&nbsp;</span>
+                    </p>
+                    <p class="u-align-left u-text u-text-3">
+                        <span class="u-text-white" style="font-weight: 700;">
+                <span style="font-size: 1.25rem;"></span>
+                        </span>
+                        <span style="font-size: 1.25rem; font-weight: 700;">Design Time&nbsp;</span>
+                        <br>Quetta City, Pakistan <br>Phon : +92-336-3501037 <br>Email : khan.ar920@gmail.com <br>Facebook : www.facebook.com/00DesignTime00/
+                    </p>
+                    <a href="mailto:Khan.ar920@gmail.com?subject=DTM" class="u-border-none u-btn u-button-style u-hover-palette-3-base u-white u-btn-1">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style class="u-overlap-style">
+        .u-overlap:not(.u-sticky-scroll) .u-header {
+            background-color: #ffffff !important
+        }
+    </style>
+    
+{%endblock%}

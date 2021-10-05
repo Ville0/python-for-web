@@ -1,0 +1,293 @@
+{% extends "master_temp.html" %} {%block title%} ADMIN {%endblock%}{%block link%}
+
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/nicepage.css')}}" media="screen">
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/admin.css')}}" media="screen">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script class="u-script" type="text/javascript" src="{{url_for('static',filename='/assets/js/admin.js')}}" defer=""></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> {%endblock%} {%block body%}
+<section>
+    <h2 style="font-family: oswald, Helvetica, sans-serif; text-align:center;"><br><b>WELLCOME IN DTM ADIMN VIEW</b></h2>
+
+    <div style="margin-right:25px; margin-left: 25px;" class="row">
+        <div class="col-8">
+            <strong>Search For : {{tag}}</strong>
+        </div>
+        <div STYLEclass="col-4">
+            <form action="" method="post" autocomplete="off">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" name="tag" id="tag" placeholder="Enter keyword" />
+                    </div>
+                    <div class="col-6" text-align="left">
+                        <input type="submit" value="Search" class="form-control btn btn-primary " name="">
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#users" role="tab">USERS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#service" role="tab">SERVICE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#orders" role="tab">ORDERS</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content ">
+        <div class="tab-pane active" id="users" role="tabpanel">
+            <section>
+
+                <div class="container">
+                    <div class="row py-5">
+                        <div class="col-12">
+                            <table id="example" class="table table-hover responsive nowrap" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>User Name</th>
+                                        <th>User Email</th>
+                                        <th>Phone Number</th>
+                                        <th>Created</th>
+                                        <th>Order Access</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {%for data in user%}
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-blue mr-3">{{data.id}}</div>
+                                        </td>
+                                        <td>
+                                            <div class="">
+                                                <p class="font-weight-bold mb-0">{{data.name}}</p>
+                                                <p class="text-muted mb-0">{{data.email}}</p>
+                                            </div>
+                                        </td>
+                                        </div>
+                                        </a>
+                                        </td>
+                                        <td>{{data.email}}</td>
+                                        <td>{{data.phone}}</td>
+                                        <td>{{data.date_created}}</td>
+                                        <td>
+                                            <div class="badge badge-success badge-success-alt">Enabled</div>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                        title="Actions"></i>
+                    <strong>...</strong></button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                    <a class="dropdown-item" href="#"><i class="bx bxs-pencil mr-2"></i> Edit Profile</a>
+                                                    <a class="dropdown-item text-danger" href="#"><i class="bx bxs-trash mr-2"></i> Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {%endfor%}
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="row py-5">
+                        <div class="col-12">
+                            <h6 class="small text-danger">Currently I'm just experimenting with this stuff, so there might be lots of redundant CSS.</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="tab-pane" id="service" role="tabpanel">
+            <!-- <p>second Panel</p> -->
+            <section>
+
+
+                <div class="container">
+                    <div class="row py-5">
+                        <div class="col-12">
+                            <table id="example" class="table table-hover responsive nowrap" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Service ID</th>
+                                        <th>Service Name</th>
+                                        <th>Service Price</th>
+                                        <th>Order Access</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {%for data in service%}
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-blue mr-3">{{data.id}}</div>
+                                        </td>
+                                        <td>{{data.sname}}</td>
+                                        <td>{{data.sprice}}</td>
+                                        <td>
+                                            <div class="badge badge-success badge-success-alt">Enabled</div>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                        title="Actions"></i>
+                    <strong>...</strong></button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                    <a class="dropdown-item" href="#"><i class="bx bxs-pencil mr-2"></i> Add</a><br>
+                                                    <a class="dropdown-item" href="#"><i class="bx bxs-pencil mr-2"></i> Edit list</a>
+                                                    <a class="dropdown-item text-danger" href="#"><i class="bx bxs-trash mr-2"></i> Remove</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {%endfor%}
+
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container text-center">
+                        <div class="row py-5">
+                            <div class="col-12">
+                                <h6 class="small text-danger">Currently I'm just experimenting with this stuff, so there might be lots of redundant CSS.</h6>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            </div>
+            <div class="tab-pane" id="orders" role="tabpanel">
+                <!-- <p>Third Panel</p> -->
+                <section>
+
+
+                    <div class="container">
+                        <div class="row py-5">
+                            <div class="col-12">
+                                <table id="example" class="table table-hover responsive nowrap" style="width:100%">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Order ID</th>
+                                            <th>User Name</th>
+                                            <th>User Email</th>
+                                            <th>User Phone</th>
+                                            <th>Service</th>
+                                            <th>Service Price</th>
+                                            <th>Height</th>
+                                            <th>width</th>
+                                            <th>Order Time</th>
+                                            <th>Actions</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {%for data in ord%}
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-blue mr-3">{{data.Order.id}}</div>
+                                            </td>
+                                            <td>{{data.User.name}}</td>
+                                            <td>{{data.User.email}}</td>
+                                            <td>{{data.User.phone}}</td>
+                                            <td>{{data.Ser.sname}}</td>
+                                            <td>{{data.Ser.sprice}}</td>
+                                            <td>{{data.Order.height}}</td>
+                                            <td>{{data.Order.width}}</td>
+                                            <td>
+                                                <div class="badge badge-success badge-error-alt">{{data.Order.order_date}}</div>
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                        title="Actions"></i>
+                    <strong>...</strong></button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                        <a class="dropdown-item text-danger" href="#"><i class="bx bxs-trash mr-2"></i> Remove</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {%endfor%}
+
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container text-center">
+                            <div class="row py-5">
+                                <div class="col-12">
+                                    <h6 class="small text-danger">Currently I'm just experimenting with this stuff, so there might be lots of redundant CSS.</h6>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                </div>
+            </div>
+
+            <br><br><br>
+
+</section>
+<style>
+    table {
+        width: 100%;
+    }
+    
+    #example_filter {
+        float: right;
+    }
+    
+    #example_paginate {
+        float: right;
+    }
+    
+    label {
+        display: inline-flex;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+    }
+    
+    .page-item.disabled .page-link {
+        color: #6c757d;
+        pointer-events: none;
+        cursor: auto;
+        background-color: #fff;
+        border-color: #dee2e6;
+    }
+</style>
+<script>
+    function checkAll(bx) {
+        var cbs = document.getElementsByTagName('input');
+        for (var i = 0; i < cbs.length; i++) {
+            if (cbs[i].type == 'checkbox') {
+                cbs[i].checked = bx.checked;
+            }
+        }
+    }
+</script>
+{%endblock%}

@@ -1,0 +1,105 @@
+{% extends "master_temp.html" %} {%block title%} Home {%endblock%} {%block link%}
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/nicepage.css')}}" media="screen">
+<link rel="stylesheet" href="{{url_for('static',filename='/assets/Home.css')}}" media="screen"> {%endblock%} {%block massage%}
+<div class=" u-container-layout u-block-194a-4" style="padding-top: 10px; padding-bottom: 15px; padding-left: 25px; padding-right: 25px">
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+    <div class="alert alert-{{ category }} " role="alert">
+        <span>{{ message }} <b>{{session['name']}}!</b></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+</div>
+
+
+
+{%endblock%}{%block body%}
+<section class="u-clearfix u-image u-section-1" id="sec-40ac" data-image-width="1000" data-image-height="667">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-center u-container-style u-group u-group-1">
+            <div class="u-container-layout u-container-layout-1">
+                <h1 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0"> WELCOME</h1>
+                <h2 class="u-subtitle u-text u-text-white u-text-2" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="1000" data-animation-direction=""> What you imagine you create that my thinking. </h2>
+                <h2 class="u-subtitle u-text u-text-default u-text-white u-text-3" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="2000" data-animation-direction=""> See my latest work!</h2>
+                <a href="{{url_for('portfolio')}}" data-page-id="2095324093" class="u-border-0 u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-white u-btn-1"> Portfolio</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-section-2" id="sec-47c4">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-palette-1-base u-shape u-shape-rectangle u-shape-1"></div>
+        <div class="u-black u-expanded-width-sm u-expanded-width-xs u-shape u-shape-rectangle u-shape-2"></div>
+        <img class="u-image u-image-1" src="{{url_for('static',filename='/assets/images/IMG_9663.jpg')}}" data-image-width="1089" data-image-height="1600">
+        <div class="u-container-style u-group u-group-1">
+            <div class="u-container-layout u-valign-top u-container-layout-1">
+                <h1 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-default-lg u-text-default-xl u-text-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+                    <span style="font-size: 3rem;"></span>ABOUT ME<span style="font-size: 3rem;"></span>
+                </h1>
+                <p class="u-text u-text-grey-15 u-text-2"> Hi, my name is Abdul Rehman I am a Graphic Designer. <br>I do love designing new things and most of the time I enjoyed and those in my all working years I learned a new thing in so I can say that I am " Life time student " Being Designer
+                    I leaned that nobody master it, we always learn new thing and that is the beauty of that. <br>"You can learn how to use the Tool but that is experienced how teaches were to use" <br>
+                    <br>Developed creative design for marketing packages, including print materials, brochures, banners and signs. <br>Used Photoshop,illustrator &amp; Corel to create images and layouts for over Many projects. <br>I have more then 4 years
+                    experience in Press and 4 years working experience in Design Time &amp; also worked for BCPP "Balochistan Council for Peace and Policy: BCPP, Samungli Road, Quetta" <br>What you imagine you create that my thinking.&nbsp;
+                </p>
+                <p class="u-text u-text-white u-text-3"> Graphic Designer<br>
+                    <span style="font-weight: 400; font-size: 1rem;" class="u-text-grey-5">January 2008 - tile Now&nbsp;</span>
+                    <br>
+                </p>
+                <a href="{{url_for('contact')}}" data-page-id="551110593" class="u-border-none u-btn u-button-style u-hover-palette-3-base u-text-active-black u-white u-btn-1">Contact us</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-black u-clearfix u-section-3" id="carousel_5a61">
+    <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <h3 class="u-custom-font u-font-oswald u-text u-text-1" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">99%</h3>
+                        <h6 class="u-custom-font u-font-oswald u-text u-text-2">Adobe<br>Photoshop
+                        </h6>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-2">
+                        <h3 class="u-custom-font u-font-oswald u-text u-text-3" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">90%</h3>
+                        <h6 class="u-custom-font u-font-oswald u-text u-text-4"> adobe illustrator</h6>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                        <h3 class="u-custom-font u-font-oswald u-text u-text-5" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">50%<br>
+                        </h3>
+                        <h6 class="u-custom-font u-font-oswald u-text u-text-6"> adobe&nbsp;<br>premiere pro
+                        </h6>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-4">
+                        <h3 class="u-custom-font u-font-oswald u-text u-text-7" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">98%</h3>
+                        <h6 class="u-custom-font u-font-oswald u-text u-text-8"> coreldraw</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+            <div class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-valign-top-xs u-container-layout-5">
+                <h2 class="u-custom-font u-font-oswald u-text u-text-default-xl u-text-9">designing&nbsp;<b>Skills</b>
+                </h2>
+                <p class="u-text u-text-10"> The ability to imagine how something will look after it is moved around or when its parts are moved or rearranged.<br>
+                    <br>In addition to these cognitive abilities or mindset, a further set of skills emerge which reinforce the technical nature of design.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<style class="u-overlap-style">
+    .u-overlap:not(.u-sticky-scroll) .u-header {
+        background-color: #ffffff !important
+    }
+</style>
+
+{%endblock%}
