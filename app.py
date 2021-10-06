@@ -136,7 +136,7 @@ def portfolio():
 
     else:
 
-        return render_template("PORTFOLIO3.html", service=servic,img=img)
+        return render_template("PORTFOLIO2.html", service=servic,img=img)
 
 
 @app.route("/order", methods=['GET', 'POST'])
