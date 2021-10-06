@@ -1,18 +1,20 @@
 {% extends "Master_temp.html" %} {%block title%} Registration {%endblock%} {%block link%}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="page_type" content="np-template-header-footer-from-plugin">
 <link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/nicepage.css')}}" media="screen">
 <link rel="stylesheet" href="{{url_for('static',filename='/assets/cs/Signup.css')}}" media="screen"> {%endblock%} {%block body%}
 
 
 
-<br><br><br><br>
-<section class="u-align-center u-clearfix u-image u-block-194a-1" custom-posts-hash="T" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" data-id="194a" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':584,'textHeight':514,'id':1,'headingProp':'h3','textProp':'text'}]"
-    data-style="login-form-3" id="carousel_b351" data-image-width="1000" data-image-height="667" style="background-image: url(&quot;/static/assets/images/photo-1561211919-1947abbbb35b.jpg&quot;); background-position: 50% 50%" data-block="82">
-    <div class="u-clearfix u-sheet u-valign-middle u-block-194a-2" style="min-height: 634px;">
-        <div class="u-align-center u-container-style u-group u-radius-50 u-shape-round u-white u-block-194a-3" style="width: 584px; min-height: 514px; margin: 60px auto; height: auto;" data-block="83" data-block-type="Group">
-            <div class="u-container-layout u-block-194a-4" style="padding-top: 30px; padding-bottom: 30px; padding-left: 0px; padding-right: 0px" data-container-layout-dom="3">
-                <h3 class="u-text u-text-default u-block-194a-5" style="font-size: 2.25rem; margin-top: 18px; margin-left: auto; margin-right: auto; margin-bottom: 0px" data-block="84" data-block-type="Text">Registration</h3>
-
-                <div class=" u-container-layout u-block-194a-4" style="padding-top: 10px; padding-bottom: 15px; padding-left: 0px; padding-right: 0px">
+<section class="u-align-center u-clearfix u-image u-section-1" id="sec-5777" data-image-width="1000" data-image-height="667">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-center u-container-style u-group u-radius-50 u-shape-round u-white u-group-1">
+            <div class="u-container-layout u-container-layout-1">
+                <h3 class="u-text u-text-default u-text-1"> Registration</h3>
+                <div class=" u-container-layout u-block-194a-4" style="padding-top: 10px; padding-bottom: 10px; padding-left: 0px; padding-right: 0px">
 
                     {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
                     <div class="alert alert-{{ category }} " role="alert">
@@ -23,9 +25,7 @@
                     </div>
                     {% endfor %} {% endif %} {% endwith %}
                 </div>
-
-
-                <div class="u-form u-block-194a-6" data-block="104" style="margin: 18px auto 0px; height: 295px; width: 502.922px;" data-block-type="Form" data-block-selected="true">
+                <div class="u-form u-form-1" style="margin-top: 5px;">
                     <form action="{{url_for('reg')}}" method="POST" class="u-clearfix u-inner-form u-form-vertical u-form-spacing-10 u-form-custom-backend" source="custom" name="form" style="padding: 10px;" redirect="true">
                         <input type="hidden" id="siteId" name="siteId" value="125600850">
                         <input type="hidden" id="pageId" name="pageId" value="1774624935">
@@ -64,14 +64,9 @@
                         </div>
                         <input type="hidden" value="" name="recaptchaResponse">
                     </form>
-
                 </div>
-
-
 
             </div>
         </div>
     </div>
-</section>
-
-{%endblock%}
+</section>{%endblock%}

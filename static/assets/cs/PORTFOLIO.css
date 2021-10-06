@@ -25,10 +25,6 @@
   padding: 10px;
 }
 
-.u-section-1 .u-carousel-thumbnails-1 {
-  padding-top: 10px;
-}
-
 .u-section-1 .u-carousel-thumbnail-1 {
   width: 100px;
   height: 100px;
@@ -43,9 +39,10 @@
 
 .u-section-1 .u-carousel-control-2 {
   position: absolute;
-  right: 10px;
   width: 40px;
   height: 40px;
+  left: auto;
+  right: 10px;
 }
 
 @media (max-width: 1199px) {
@@ -118,6 +115,7 @@
 }
 
 .u-section-2 .u-form-group-2 {
+  width: 100%;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -128,6 +126,10 @@
 
 .u-section-2 .u-form-group-4 {
   margin-left: 0;
+}
+
+.u-section-2 .u-form-group-5 {
+  width: 100%;
 }
 
 .u-section-2 .u-btn-1 {
@@ -196,10 +198,6 @@
     width: 100%;
   }
 
-  .u-section-2 .u-form-group-2 {
-    width: 100%;
-  }
-
   .u-section-2 .u-form-group-3 {
     width: 100%;
   }
@@ -207,8 +205,89 @@
   .u-section-2 .u-form-group-4 {
     width: 100%;
   }
+}.u-section-3 .u-sheet-1 {
+  min-height: 272px;
+}
 
-  .u-section-2 .u-form-group-5 {
-    width: 100%;
+.u-section-3 .u-group-1 {
+  min-height: 206px;
+  background-image: none;
+  width: 901px;
+  height: auto;
+  margin: 16px auto 50px;
+}
+
+.u-section-3 .u-container-layout-1 {
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.u-section-3 .u-text-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: none;
+  margin: 11px 7px 0;
+}
+
+.u-section-3 .u-text-2 {
+  font-weight: 700;
+  margin: 16px 7px 0;
+}
+
+.u-section-3 .u-btn-1 {
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  border-style: solid;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px auto 0;
+  padding: 9px 71px 11px 70px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-3 .u-group-1 {
+    height: auto;
+  }
+
+  .u-section-3 .u-container-layout-1 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-3 .u-group-1 {
+    width: 720px;
+  }
+
+  .u-section-3 .u-text-1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-3 .u-text-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-3 .u-group-1 {
+    width: 540px;
+  }
+
+  .u-section-3 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-3 .u-group-1 {
+    width: 340px;
+  }
+
+  .u-section-3 .u-text-1 {
+    font-size: 2.25rem;
   }
 }
