@@ -434,7 +434,7 @@ def adduser():
             else:
                 flash('Username or Email already exists','danger')
                 return redirect (url_for(('adduser')))
-
+ 
         return render_template('adduser.html', user=user,ord=ord)    
 
 @app.route('/logout')
@@ -447,4 +447,4 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
