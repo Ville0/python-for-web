@@ -28,7 +28,7 @@ class User(db.Model):
     email = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(30), nullable=False)
     phone = db.Column(db.String(20), nullable=False)
-    date_created = db.Column(db.DATE, default=datetime.now(), nullable=False)
+    date_created = db.Column(db.DATETIME, default=datetime.utcnow(), nullable=False)
     
 
 
@@ -47,7 +47,7 @@ class Order(db.Model):
     details = db.Column(db.Text(100))
     height = db.Column((db.Float), nullable=False)
     width = db.Column((db.Float), nullable=False)
-    order_date = db.Column(db.DATE, default=datetime.now(), nullable=False)
+    order_date = db.Column(db.DATETIME, default=datetime.utcnow(), nullable=False)
     price = db.Column(db.Float(30))
 
 
@@ -337,37 +337,45 @@ def update_ser(id):
         else:
             serv = Ser.query.filter(Ser.id == id).first()
             return render_template("upser.html", serv=serv,ord=ord)
+            
 @app.route("/update/user/<id>", methods=['GET', 'POST'])
 def update_user(id):
-    ord = db.session.query(User, Order, Ser).\
-    filter(Order.service_id == Ser.id).\
-    filter(Order.user_id == User.id).order_by(Order.order_date.desc()).all()
-    
-    if request.method=="POST":
-        
-        name = request.form.get("name").lower()
-        email = request.form.get("email")
-        password = request.form.get("password")
-        phone = request.form.get("phone")
-            
-        #serv = db.session.query(Ser).filter_by(id=id).first()
-        useru = User.query.filter_by(id = id).first()
-        useru.name = name
-        useru.email = email
-        useru.password = password
-        useru.phone= phone
-        db.session.commit()
-        flash('Successfully Updated!','success')
-        return redirect(url_for('ustab'))
-
+    if not session.get('admin') :
+        session.clear()
+        flash('Unauthorized access login correctly! ','danger')
+        return render_template("login2.html")
     else:
-        serv = User.query.filter(User.id == id).first()
-        return render_template("upuser.html", serv=serv,ord=ord)
+        ord = db.session.query(User, Order, Ser).\
+        filter(Order.service_id == Ser.id).\
+        filter(Order.user_id == User.id).order_by(Order.order_date.desc()).all()
+    
+        if request.method=="POST":
+            name = request.form.get("name").lower()
+            email = request.form.get("email")
+            password = request.form.get("password")
+            phone = request.form.get("phone")
+            
+            #serv = db.session.query(Ser).filter_by(id=id).first()
+            useru = User.query.filter_by(id = id).first()
+            useru.name = name
+            useru.email = email
+            useru.password = password
+            useru.phone= phone
+            db.session.commit()
+            flash('Successfully Updated!','success')
+            return redirect(url_for('ustab'))
+
+        else:
+            serv = User.query.filter(User.id == id).first()
+            return render_template("upuser.html", serv=serv,ord=ord)
 
 @app.route("/delete/user/<id>", methods=['GET', 'POST'])
 def delete_user(id):
-    
-             
+    if not session.get('admin') :
+        session.clear()
+        flash('Unauthorized access login correctly! ','danger')
+        return render_template("login2.html")
+    else:
        
         duser = User.query.filter(User.id==id).first()
 
@@ -378,9 +386,13 @@ def delete_user(id):
 
 @app.route("/delete/service/<id>", methods=['GET', 'POST'])
 def delete_ser(id):
+    if not session.get('admin') :
+        session.clear()
+        flash('Unauthorized access login correctly! ','danger')
+        return render_template("login2.html")
     
-             
-       
+    else:
+
         serv = Ser.query.filter(Ser.id==id).first()
 
         db.session.delete(serv)
@@ -390,9 +402,12 @@ def delete_ser(id):
 
 @app.route("/delete/order/<id>", methods=['GET', 'POST'])
 def delete_ord(id):
+    if not session.get('admin') :
+        session.clear()
+        flash('Unauthorized access login correctly! ','danger')
+        return render_template("login2.html")
     
-             
-       
+    else:
         uord = Order.query.filter(Order.id==id).first()
 
         db.session.delete(uord)
@@ -447,4 +462,4 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

@@ -1,0 +1,28 @@
+CREATE TABLE "order" (
+	"id"	INTEGER NOT NULL,
+	"user_id"	INTEGER NOT NULL,
+	"service_id"	int(11) NOT NULL,
+	"details"	text NOT NULL,
+	"height"	float NOT NULL,
+	"width"	float NOT NULL,
+	"order_date"	DATETIME NOT NULL DEFAULT current_timestamp,
+	"price"	double NOT NULL,
+	FOREIGN KEY("service_id") REFERENCES "service"("id"),
+	FOREIGN KEY("user_id") REFERENCES "user"("id"),
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+CREATE TABLE "user" (
+	"id"	INTEGER NOT NULL,
+	"name"	varchar(30) NOT NULL DEFAULT NULL,
+	"email"	varchar(50) NOT NULL DEFAULT NULL UNIQUE,
+	"password"	varchar(30) NOT NULL DEFAULT NULL,
+	"phone"	varchar(20) NOT NULL DEFAULT NULL,
+	"date_created"	DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+CREATE TABLE "service" (
+	"id"	INTEGER NOT NULL,
+	"sname"	varchar(20) NOT NULL,
+	"sprice"	float NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
