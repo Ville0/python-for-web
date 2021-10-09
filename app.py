@@ -217,7 +217,7 @@ def ordtab():
         ord = db.session.query(User, Order, Ser).\
         filter(Order.service_id == Ser.id).\
         filter(Order.user_id == User.id).order_by(Order.order_date.desc()).all()
-        
+    
         if request.method == 'POST' and 'tag' in request.form:
             name = request.form.get("name")
        
