@@ -27,8 +27,6 @@ The website where you can make fine all graphic desiging work and you can alos s
 
 ## DTM websit.zip
 
-if the full website.
-
 Install libraries before use.
 
 ```sh
@@ -41,8 +39,8 @@ sqlalchemy-orm
 ```
 
 ## Copyrights 
-
 all copyrights are reserved by Designtime.
+
 # Team members
 > Abdul Rehman
 Designer
