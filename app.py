@@ -12,7 +12,7 @@ app = Flask(__name__)
 db = SQLAlchemy()
 # app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@localhost:3307/dtm"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///dtm.db"
-app.config['SECRET_KEY'] = "random string"
+app.config['SECRET_KEY'] = "randamstring"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 app.config["SESSION_PERMANENT"] = False
