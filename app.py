@@ -10,7 +10,7 @@ app = Flask(__name__)
 # postgress
 db = SQLAlchemy()
 # app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@localhost:3307/dtm"
-app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL') or "sqlite:///dtm.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('sqlite:///dtm.db') 
 #app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///dtm.db"
 app.config['SECRET_KEY'] = "random string"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
