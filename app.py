@@ -1,4 +1,4 @@
-import os
+from os import environ
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -10,8 +10,8 @@ app = Flask(__name__)
 # postgress
 db = SQLAlchemy()
 # app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@localhost:3307/dtm"
-#app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL') or "sqlite:///dtm.db"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///dtm.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL') or "sqlite:///dtm.db"
+#app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///dtm.db"
 app.config['SECRET_KEY'] = "random string"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
