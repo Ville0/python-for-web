@@ -12,7 +12,7 @@ app = Flask(__name__)
 db = SQLAlchemy()
 # app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@localhost:3307/dtm"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///dtm.db"
-app.config['SECRET_KEY'] = "randamstring"
+app.config['SECRET_KEY'] = "random string"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 app.config["SESSION_PERMANENT"] = False
@@ -217,7 +217,7 @@ def ordtab():
         ord = db.session.query(User, Order, Ser).\
         filter(Order.service_id == Ser.id).\
         filter(Order.user_id == User.id).order_by(Order.order_date.desc()).all()
-    hes
+        
         if request.method == 'POST' and 'tag' in request.form:
             name = request.form.get("name")
        
@@ -462,4 +462,4 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
