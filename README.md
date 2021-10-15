@@ -58,7 +58,7 @@ production manager
 social media manager
 
 > Abdul Wahab khan
-delivery manager
+Reserch manager
 
 
 ## Thank you.
