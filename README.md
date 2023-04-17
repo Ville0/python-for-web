@@ -41,25 +41,6 @@ sqlalchemy-orm
 ## Copyrights 
 all copyrights are reserved by Designtime.
 
-# Team members
-> Abdul Rehman
-Designer
-             
-> Wali Baloch
-Back hand developer
-
-> zara
-Database designer
-
-> Aqeel ahmed
-production manager
-
-> Sharam Umer
-social media manager
-
-> Abdul Wahab khan
-Reserch manager
-
 
 ## Thank you.
 ## FOR MORE INFORMATION
